@@ -1,0 +1,11 @@
+.btn{
+    width: 100%;
+}
+
+.gif, .results{
+    display: none;
+}
+
+.warn{
+    font-size: .8rem;
+}

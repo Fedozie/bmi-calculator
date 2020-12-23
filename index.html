@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Fontawesome CDN -->
+    <script src="https://use.fontawesome.com/b28079a2e6.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>BMI Calculator</title>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body mt-5">
+                    <h1 class="heading display-5 pb-3 text-center">BMI Calculator</h1>
+                    <form id="bmi-form">
+                        <div class="form-group">
+                                <label for="weight" class="form-label h5">Weight</label>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text">Kilograms</span>
+                                <input type="number" id="weight" class="form-select" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="height" class="form-label h5">Height</label>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text">Metres</span>
+                                <input type="number" id="height" class="form-select">
+                            </div>
+                            <div class="mb-4">
+                                <input type="submit" value="Calculate" class="btn btn-outline-success btn-lg">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="gif mx-auto">
+                        <img src="resources/loading.gif" alt="Gif of a loader">
+                    </div>
+
+                    <div class="results">
+                        <h4 class="text-center">Results</h4>
+
+                        <label for="bmi" class="form-label h5">Your BMI is </label>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text">kg/m<sup>2</sup></span>
+                            <input type="number" id="bmi" class = "form-control" disabled>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning warn" role="alert">
+                        <h4> <i class="fa fa-exclamation-circle"></i> Caution</h4>
+                        <p>
+                            BMI is not used for muscle builders, long distance athletes, pregnant women, the elderly or young children. This is because BMI does not take into account whether the weight is carried as muscle or fat, just the number. Those with a higher muscle mass, such as athletes, may have a high BMI but not be at greater health risk. Those with a lower muscle mass, such as children who have not completed their growth or the elderly who may be losing some muscle mass may have a lower BMI. During pregnancy and lactation, a woman's body composition changes, so using BMI is not appropriate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
