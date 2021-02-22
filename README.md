@@ -8,3 +8,4 @@ BMI is calculated with the mathematical formula;
 
 **BMI** = **Weight** in kilograms divided by **Height** in metres squared
 
+Try out the calculator here --> https://calculate-bmi-app.netlify.app/
