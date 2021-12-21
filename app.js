@@ -12,7 +12,6 @@ document.querySelector('#bmi-form').addEventListener('submit', function(e){
 
 
 function calculateBMI(){
-
     //UI Variables
     const weight = document.querySelector('#weight');
     const height = document.querySelector('#height');
@@ -28,14 +27,12 @@ function calculateBMI(){
     //Function to check if the calcBMI variable is a finite number
     if(isFinite(calcBMI)){
         bmi.value = calcBMI;
-        
 
         //Show results
         document.querySelector('.results').style.display = 'block';
 
         //Hide loader
         document.querySelector('.gif').style.display = "none";
-
     }else{
         showError("Please check your numbers, there's a wrong input somewhere.");
     };
@@ -70,21 +67,20 @@ function showError(error){
 
 };
 
-
 //Clear error after 3seconds
 function clearError(){
     document.querySelector('.alert').remove();
 };
 
 //Pop-up Function
-function popup(calcBMI){
-    if(calcBMI <= 18.5){
+function popup(number){
+    if(number <= 18.5){
         return alert('Your Body Mass Index seems to indicate that you are underweight.')
-    }else if(calcBMI >= 18.5 && calcBMI <= 25.0){
+    }else if(number >= 18.5 && number <= 25.0){
         return alert('Your Body Mass Index falls within the normal range.')
-    }else if(calcBMI >= 25.0 && calcBMI <= 30.0){
+    }else if(number >= 25.0 && number <= 30.0){
         return alert('Your Body Mass Index falls within the overweight range.')
     }else{
-        return alert('It seems your Body Mass Index falls with obese range.')
+        return alert('It seems your Body Mass Index falls within obese range.')
     }
 }
